@@ -33,19 +33,19 @@ Credentials will be provided for these services by the instructor:
 
 ### To connect using Putty from Windows laptop
 
-- Right click to download [this ppk key](https://raw.githubusercontent.com/apsaltis/HDF-Workshop/master/hdf-workshop.ppk) > Save link as > save to Downloads folder
+- Right click to download [this ppk key](https://raw.githubusercontent.com/jdye64/HDF-Workshop/master/hdf-workshop.ppk) > Save link as > save to Downloads folder
 - Use putty to connect to your node using the ppk key:
   - Connection > SSH > Auth > Private key for authentication > Browse... > Select hdf-workshop.ppk
-![Image](https://raw.githubusercontent.com/apsaltis/HDF-Workshop/master/putty.png)
+![Image](https://raw.githubusercontent.com/jdye64/HDF-Workshop/master/putty.png)
 
 - Create a new seession called `hdf-workshop` and  sure to click "Save" on the session page before logging in
-![Image](https://github.com/apsaltis/HDF-Workshop/raw/master/putty-session.png)
+![Image](https://github.com/jdye64/HDF-Workshop/raw/master/putty-session.png)
 
 
 ### To connect from Linux/MacOSX laptop
 
 - SSH into your EC2 node using below steps:
-- Right click to download [this pem key](https://raw.githubusercontent.com/apsaltis/HDF-Workshop/master/hdf-workshop.pem)  > Save link as > save to Downloads folder
+- Right click to download [this pem key](https://raw.githubusercontent.com/jdye64/HDF-Workshop/master/hdf-workshop.pem)  > Save link as > save to Downloads folder
 - Copy pem key to ~/.ssh dir and correct permissions
     ```
     cp ~/Downloads/hdf-workshop.pem ~/.ssh/
@@ -103,8 +103,8 @@ To get started we need to consume the data from the Meetup RSVP stream, extract 
 
  Our final flow for this lab will look like the following:
 
-  ![Image](https://github.com/apsaltis/HDF-Workshop/raw/master/lab1.png)
-  A template for this flow can be found [here](https://raw.githubusercontent.com/apsaltis/HDF-Workshop/master/templates/HDF-Workshop_Lab1-Flow.xml)
+  ![Image](https://github.com/jdye64/HDF-Workshop/raw/master/lab1.png)
+  A template for this flow can be found [here](https://raw.githubusercontent.com/jdye64/HDF-Workshop/master/templates/HDF-Workshop_Lab1-Flow.xml)
 
 
   - Step 1: Add a ConnectWebSocket processor to the cavas
@@ -113,7 +113,7 @@ To get started we need to consume the data from the Meetup RSVP stream, extract 
   - Step 2: Add an Update Attribute procesor
     - Configure it to have a custom property called ``` mime.type ``` with the value of ``` application/json ```
   - Step 3. Add an EvaluateJsonPath processor and configure it as shown below:
-  ![Image](https://github.com/apsaltis/HDF-Workshop/raw/master/jsonpath.png)
+  ![Image](https://github.com/jdye64/HDF-Workshop/raw/master/jsonpath.png)
 
     The properties to add are:
     ```
